@@ -54,7 +54,7 @@ VALUES ('Max', 'TheFriendsCate', 'April 20, 2015')
 UPDATE yanjieCUSTOMER
 SET Fname = 'Jasmine'
 WHERE Fname = 'Jazzy'
--- one transactio ntwo statements 
+-- one transactio ntwo statements -- DBCC OpenTran -- check open transaction
 -- select * from yanjieCUSTOMER, the other data is locked, read table being locked. --select * from yanjieCUSTOMER with (nolock) -- changing isolation level.
 COMMIT TRANSACTION G1
 

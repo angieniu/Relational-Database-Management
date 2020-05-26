@@ -52,7 +52,7 @@ SET @OT_ID = (SELECT OfficeTypeID FROM tblOFFICE_TYPE WHERE OfficeTypeName = @OT
 -- another set of error-handling goes here
 BEGIN
 	PRINT 'Hey... system cannot locate an ID value for the Building just submitted.';
-	THROW 50445, '@B_ID is NULL; the INSERT statement is being terminated', 1; -- 50445 call the message by number
+	THROW 50445, '@B_ID is NULL; the INSERT statement is being terminated', 1; -- 50445 call the message by number. a system error: 3 digits; operating system error: 1 digit; user generated: 50000    select * from sys.sysmessages -- old school
 	-- throw terminates automatically connection
 END
  
